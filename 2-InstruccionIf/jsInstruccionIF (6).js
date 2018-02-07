@@ -4,21 +4,19 @@ function Mostrar()
 	var edad;
 	edad=document.getElementById('edad').value;
 
-	if(edad<13)
+	if(edad>17)
 	{
-		alert("es un niño");
+		alert("usted es mayor de edad");
 	}
 	else
 	{
-		if(edad>17)
+		if(edad<13)
 		{
-			alert("es mayor")
+			alert("usted es niño");
 		}
 		else
 		{
-			alert("es adolecente")
+			alert("usted es adolecente");
 		}
 	}
-
-
 }//FIN DE LA FUNCIÓN
