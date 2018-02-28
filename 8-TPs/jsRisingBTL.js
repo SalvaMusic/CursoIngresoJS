@@ -9,5 +9,62 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+ 	var edad;
+ 	var sexo;
+ 	var estadoCivil;
+ 	var sueldoBruto;
+ 	var numeroLegajo;
+ 	var nacionalidad;
+
+	edad=prompt("Ingrese edad");
+ 	edad=parseInt(edad);
+ 	while(isNaN(edad) || (edad <18 || edad >90))
+ 	{
+ 		edad=prompt("Ingrese edad");
+ 		edad=parseInt(edad);
+ 	}
+ 	document.getElementById('Edad').value=edad;
+
+ 	sexo=prompt("Ingrese sexo: 'M' para masculino o 'F' para Femenino");
+
+ 	while(sexo != 'M' && sexo != 'F')
+ 	{
+ 		sexo=prompt("Ingrese sexo: 'M' para masculino o 'F' para Femenino");
+ 	}
+ 	document.getElementById('Sexo').value=sexo;
+
+ 	estadoCivil=prompt("Ingrese estado civil: 1(Soltero) / 2(Casado) / 3 (Divorsiado / 4 (Viudo)");
+ 	estadoCivil=parseInt(estadoCivil);
+ 	while(isNaN(estadoCivil) || (estadoCivil<1 || estadoCivil>4))
+ 	{
+ 		estadoCivil=prompt("Ingrese estado civil: 1(Soltero) / 2(Casado) / 3 (Divorsiado / 4 (Viudo)");
+ 		estadoCivil=parseInt(estadoCivil);
+ 	}
+ 	switch(estadoCivil)
+ 	{
+ 		case 1:
+ 			estadoCivil=Soltero;
+ 			break;
+ 		case 2:
+ 			estadoCivil=Casado;
+ 			break;
+ 		case 3:
+ 			estadoCivil=Divorsiado;
+ 			break;
+ 		case 4:
+ 			estadoCivil=Viudo;
+ 			break;
+ 	}
+ 	document.getElementById('EstadoCivil').value=estadoCivil;
+/*
+ 	sueldoBruto=prompt("Ingrese sueldo bruto");
+
+ 	numeroLegajo=prompt("Ingrese numero de legajo");
+
+ 	while(legajo<1000 || legajo >9999 || isNaN(legajo)
+
+
+ 	nacionalidad=prompt("Ingrese nacionalidad");
+
+ 	sexo=prompt("Ingrese edad");*/
 }
